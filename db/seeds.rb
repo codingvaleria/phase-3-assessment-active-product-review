@@ -22,5 +22,12 @@ puts "Creating reviews..."
 # * and a review belongs to an user.                              *
 # *****************************************************************
 # Create Reviews Here
+10.times do 
+    review1 = Review.create(star_rating:rand(1..10), 
+    comment: Faker::Lorem.sentence(word_count: rand(1..5)), 
+    user_id:[user1,user2,user3].sample.id, 
+    product_id: [product1,product2,product3,product4,product5].sample.id
+    ) 
 
+end
 puts "Seeding done!"
